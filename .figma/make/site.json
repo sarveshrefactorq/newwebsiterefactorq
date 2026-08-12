@@ -1,0 +1,12 @@
+{
+  "title": "RefactorQ.AI | AI-First Consulting",
+  "description": "RefactorQ.AI combines AI-first consulting, agentic automation, cloud and SRE engineering, performance, quality, security, and product delivery.",
+  "language": "en",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

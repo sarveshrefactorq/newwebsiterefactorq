@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Use PORT if set by the workload, fall back to PROXY_PORT, then 8443
+exec pnpm run dev
