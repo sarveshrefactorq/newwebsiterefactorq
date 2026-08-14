@@ -1,23 +1,21 @@
 import { Link } from "react-router-dom"
 
 import { BOOKING_URL, CAREERS_EMAIL, CONTACT_EMAIL } from "../../config/site"
-
 import { services } from "../../data/services"
 
-import logoWhite from "../../imports/RefactorQ-Logo-White_1.svg"
+import logoBlue from "../../imports/RefactorQ-Logo-Blue_2.svg"
 
 function FooterHeading({ children }: { children: string }) {
   return (
-    <div className="mb-5 inline-flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[#38bdf8]">
-      <span className="h-0.5 w-3 rounded-full bg-[#38bdf8]" />
-      <h3>{children}</h3>
-    </div>
+    <h3 className="mb-5 font-sans text-xs font-bold tracking-widest text-slate-900 uppercase">
+      {children}
+    </h3>
   )
 }
 
 function MailIcon() {
   return (
-    <svg className="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
+    <svg className="h-4 w-4 shrink-0 text-indigo-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path d="M3 6.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-11Z" strokeLinecap="round" strokeLinejoin="round" />
       <path d="m3.5 6 8.5 6.5L20.5 6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -26,7 +24,7 @@ function MailIcon() {
 
 function BriefcaseIcon() {
   return (
-    <svg className="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
+    <svg className="h-4 w-4 shrink-0 text-indigo-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <rect x="3" y="7.5" width="18" height="12" rx="2" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5M3 12.5h18" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -35,7 +33,7 @@ function BriefcaseIcon() {
 
 function PhoneIcon() {
   return (
-    <svg className="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
+    <svg className="h-4 w-4 shrink-0 text-indigo-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2C10.5 19 5 13.5 4.5 6.5a2 2 0 0 1 2-3Z" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
@@ -57,79 +55,163 @@ function XIcon() {
   )
 }
 
+// 3D Graphic Artwork Component with RefactorQ Company Standard Palette (Orange/Warm Amber & Slate)
+function Banner3DGraphic() {
+  return (
+    <div className="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center shrink-0">
+      <div className="absolute inset-0 bg-indigo-500/25 rounded-full blur-2xl animate-pulse" />
+      <svg className="w-full h-full relative z-10 drop-shadow-2xl" viewBox="0 0 200 200" fill="none">
+        <defs>
+          <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#818cf8" />
+            <stop offset="50%" stopColor="#4f46e5" />
+            <stop offset="100%" stopColor="#3730a3" />
+          </linearGradient>
+          <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.05" />
+          </linearGradient>
+        </defs>
+        {/* Outer orbital rings */}
+        <circle cx="100" cy="100" r="75" stroke="url(#glassGrad)" strokeWidth="3" strokeDasharray="6 6" />
+        <circle cx="100" cy="100" r="60" stroke="#a5b4fc" strokeWidth="1.5" strokeOpacity="0.5" />
+        {/* Glowing 3D Orb */}
+        <circle cx="100" cy="100" r="44" fill="url(#orbGrad)" />
+        {/* Glass reflection highlight */}
+        <ellipse cx="85" cy="80" rx="20" ry="12" fill="#ffffff" fillOpacity="0.35" transform="rotate(-30 85 80)" />
+        {/* Sparkles */}
+        <path d="M145 55L148 65L158 68L148 71L145 81L142 71L132 68L142 65Z" fill="#ffffff" fillOpacity="0.9" />
+        <path d="M50 135L52 142L59 144L52 146L50 153L48 146L41 144L48 142Z" fill="#c7d2fe" fillOpacity="0.8" />
+      </svg>
+    </div>
+  )
+}
+
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#070d18] text-white">
-      <div className="page-shell py-16">
-        {/* High-Impact Bottom CTA Banner Card */}
-        <div className="mb-16 flex flex-wrap items-center justify-between gap-8 rounded-[24px] border border-white/10 bg-gradient-to-r from-[#0c1827] via-[#10233b] to-[#0c1827] p-10 lg:p-12 relative overflow-hidden shadow-2xl">
-          {/* Subtle Ambient Lighting Glow */}
-          <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-orange-500/10 blur-[100px] pointer-events-none" />
-          <div className="absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-sky-500/10 blur-[100px] pointer-events-none" />
-
-          <div className="max-w-xl relative z-10">
-            <div className="mb-3 flex items-center gap-2">
-              <span className="h-1 w-2.5 rounded-full bg-orange-500" />
-              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-orange-400">
-                Let&apos;s begin the journey together
-              </span>
+    <footer className="relative bg-white text-slate-700 pt-24 pb-12 border-t border-slate-200/80">
+      <div className="page-shell">
+        {/* Floating CTA Banner Overlapping Top Border (Compact Professional Light Style) */}
+        <div className="-mt-32 mb-12 relative z-20 overflow-hidden rounded-[24px] bg-indigo-50 p-6 sm:p-8 md:p-10 text-slate-900 shadow-lg shadow-slate-200/50 border border-indigo-100 text-center">
+          <div className="mx-auto max-w-2xl flex flex-col items-center justify-center">
+            {/* Eyebrow Tag */}
+            <div className="mb-3 inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-indigo-500/10 text-[11px] font-semibold tracking-wider text-indigo-600 border border-indigo-500/20">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 animate-pulse" />
+              Let&apos;s begin the journey together
             </div>
-            <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl">
+            
+            {/* Centered Main Title (No Underline) */}
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold leading-snug tracking-tight text-slate-900 mb-2">
               AI-first consulting backed by{" "}
-              <span className="bg-gradient-to-r from-orange-400 via-amber-300 to-orange-500 bg-clip-text text-transparent">
+              <span className="text-indigo-600">
                 real engineering depth.
               </span>
             </h2>
-            <p className="mt-3.5 text-sm leading-relaxed text-slate-300">
-              Tell us where delivery slows down, where scale gets expensive, or
-              where AI can create operational lift. We will bring a point of
-              view and a plan.
+            
+            {/* Image 2 Dotted Accent */}
+            <div className="my-1.5 flex items-center justify-center gap-1.5 opacity-50">
+              <span className="h-0.5 w-1 bg-slate-400 rounded-full" />
+              <span className="h-0.5 w-1 bg-slate-400 rounded-full" />
+              <span className="h-0.5 w-1 bg-slate-400 rounded-full" />
+              <span className="h-0.5 w-2.5 bg-indigo-500 rounded-full" />
+              <span className="h-0.5 w-1 bg-slate-400 rounded-full" />
+              <span className="h-0.5 w-1 bg-slate-400 rounded-full" />
+              <span className="h-0.5 w-1 bg-slate-400 rounded-full" />
+            </div>
+
+            {/* Subtitle / Description */}
+            <p className="text-xs sm:text-sm leading-relaxed text-slate-600 mb-6 font-normal max-w-xl">
+              Tell us where delivery slows down, where scale gets expensive, or where AI can create operational lift. We will bring a point of view and a plan.
             </p>
-          </div>
-          <div className="flex min-w-[220px] flex-col gap-3.5 relative z-10">
+
+            {/* Email / Action Form Row */}
+            <form onSubmit={(e) => { e.preventDefault(); window.location.href = BOOKING_URL }} className="w-full max-w-xl mb-4">
+              <div className="flex flex-col sm:flex-row items-center gap-2 p-1.5 bg-white rounded-2xl sm:rounded-full border border-slate-200 shadow-md focus-within:ring-2 focus-within:ring-indigo-500/20 focus-within:border-indigo-500/40 transition-all">
+                <div className="flex items-center gap-3 flex-1 min-w-0 pl-4 pr-2 py-1.5 w-full">
+                  <svg className="h-5 w-5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M3 6.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-11Z" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="m3.5 6 8.5 6.5L20.5 6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <input
+                    type="email"
+                    placeholder="Your company email"
+                    required
+                    className="w-full text-sm text-slate-800 placeholder-slate-400 bg-transparent focus:outline-none font-medium"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto shrink-0 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-3 text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-indigo-600/25 transition-all duration-200 active:scale-95 cursor-pointer whitespace-nowrap"
+                >
+                  Book a consultation →
+                </button>
+              </div>
+            </form>
+
+            {/* Secondary Action */}
             <a
-              className="rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 px-7 py-3.5 text-center text-sm font-bold text-slate-950 shadow-[0_0_20px_rgba(249,115,22,0.3)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)]"
               href={BOOKING_URL}
-            >
-              Book a consultation →
-            </a>
-            <a
-              className="rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-center text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:border-white/30"
-              href={BOOKING_URL}
+              className="text-xs text-slate-600 hover:text-indigo-600 font-semibold transition-colors"
             >
               Request a demo
             </a>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-8 gap-y-12 pb-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-x-12 lg:pb-12">
-          <div className="col-span-2 lg:col-span-1">
-            <img alt="RefactorQ" className="mb-4 h-9 w-auto" src={logoWhite} />
-            <p className="max-w-[260px] text-[13.5px] leading-[1.75] text-slate-300">
-              RefactorQ.AI combines AI delivery, model-aware engineering, and
-              proven platform expertise across performance, cloud, security,
-              and quality.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              <span className="rounded-md border border-white/[0.1] bg-white/[0.05] px-2.5 py-1.5 font-mono text-[11px] font-medium text-slate-300">
-                Dublin
-              </span>
-              <span className="rounded-md border border-white/[0.1] bg-white/[0.05] px-2.5 py-1.5 font-mono text-[11px] font-medium text-slate-300">
-                Pune
-              </span>
-              <span className="rounded-md border border-white/[0.1] bg-white/[0.05] px-2.5 py-1.5 font-mono text-[11px] font-medium text-slate-300">
-                Est. 2021
-              </span>
+        {/* Main Footer 4-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
+          {/* Column 1: Logo & Brand Info */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <img alt="RefactorQ" className="mb-5 h-8 w-auto" src={logoBlue} />
+              <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal mb-5 max-w-xs">
+                RefactorQ.AI combines AI delivery, model-aware engineering, and proven platform expertise across performance, cloud, security, and quality.
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="rounded-full border border-slate-200 bg-slate-100/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-700">
+                  Dublin
+                </span>
+                <span className="rounded-full border border-slate-200 bg-slate-100/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-700">
+                  Pune
+                </span>
+                <span className="rounded-full border border-slate-200 bg-slate-100/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-700">
+                  Est. 2021
+                </span>
+              </div>
+            </div>
+
+            {/* Social Icons Row */}
+            <div className="flex items-center gap-2.5">
+              <a
+                aria-label="LinkedIn"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 border border-slate-200 hover:bg-indigo-500 hover:text-white hover:border-indigo-500 transition-all duration-200 shadow-2xs"
+                href="https://linkedin.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <LinkedInIcon />
+              </a>
+              <a
+                aria-label="X (Twitter)"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 border border-slate-200 hover:bg-indigo-500 hover:text-white hover:border-indigo-500 transition-all duration-200 shadow-2xs"
+                href="https://x.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <XIcon />
+              </a>
             </div>
           </div>
 
+          {/* Column 2: Services */}
           <div>
             <FooterHeading>Services</FooterHeading>
-            <div className="flex flex-col gap-3.5">
+            <div className="flex flex-col gap-3">
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  className="text-[13.5px] text-slate-300 transition-colors hover:text-white"
+                  className="text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors"
                   to={`/services/${service.slug}`}
                 >
                   {service.shortTitle}
@@ -138,112 +220,88 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Column 3: Company */}
           <div>
             <FooterHeading>Company</FooterHeading>
-            <div className="flex flex-col gap-3.5">
-              <Link
-                className="text-[13.5px] text-slate-300 transition-colors hover:text-white"
-                to="/products"
-              >
+            <div className="flex flex-col gap-3">
+              <Link className="text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors" to="/products">
                 Products
               </Link>
-              <Link
-                className="text-[13.5px] text-slate-300 transition-colors hover:text-white"
-                to="/aviation"
-              >
+              <Link className="text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors" to="/aviation">
                 Aviation consulting
               </Link>
-              <Link
-                className="text-[13.5px] text-slate-300 transition-colors hover:text-white"
-                to="/culture"
-              >
+              <Link className="text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors" to="/culture">
                 Culture
               </Link>
-              <Link
-                className="text-[13.5px] text-slate-300 transition-colors hover:text-white"
-                to="/careers"
-              >
+              <Link className="text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors" to="/careers">
                 Careers
               </Link>
-              <Link
-                className="text-[13.5px] text-slate-300 transition-colors hover:text-white"
-                to="/blogs"
-              >
+              <Link className="text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors" to="/blogs">
                 Blogs
               </Link>
             </div>
           </div>
 
+          {/* Column 4: Contact Us */}
           <div>
-            <FooterHeading>Contact</FooterHeading>
+            <FooterHeading>Contact Us</FooterHeading>
             <div className="flex flex-col gap-3.5">
               <a
-                className="flex items-center gap-2 text-[13.5px] text-slate-300 transition-colors hover:text-white"
+                className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors group"
                 href={`mailto:${CONTACT_EMAIL}`}
               >
-                <MailIcon />
-                {CONTACT_EMAIL}
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0 shadow-2xs">
+                  <MailIcon />
+                </span>
+                <span className="truncate">{CONTACT_EMAIL}</span>
               </a>
               <a
-                className="flex items-center gap-2 text-[13.5px] text-slate-300 transition-colors hover:text-white"
+                className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors group"
                 href={`mailto:${CAREERS_EMAIL}`}
               >
-                <BriefcaseIcon />
-                {CAREERS_EMAIL}
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0 shadow-2xs">
+                  <BriefcaseIcon />
+                </span>
+                <span className="truncate">{CAREERS_EMAIL}</span>
               </a>
               <a
-                className="flex items-center gap-2 text-[13.5px] text-slate-300 transition-colors hover:text-white"
+                className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors group"
                 href="tel:+353894049974"
               >
-                <PhoneIcon />
-                Ireland: +353 89 404 9974
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0 shadow-2xs">
+                  <PhoneIcon />
+                </span>
+                <span>Ireland: +353 89 404 9974</span>
               </a>
               <a
-                className="flex items-center gap-2 text-[13.5px] text-slate-300 transition-colors hover:text-white"
+                className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 hover:text-indigo-600 font-medium transition-colors group"
                 href="tel:+917666235138"
               >
-                <PhoneIcon />
-                India: +91 76662 35138
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100 group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0 shadow-2xs">
+                  <PhoneIcon />
+                </span>
+                <span>India: +91 76662 35138</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-white/[0.08] pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <span className="text-xs text-slate-400">
-            © 2026 RefactorQ Consulting LLP
-          </span>
-          <div className="flex items-center gap-5">
-            <Link
-              className="text-xs text-slate-400 transition-colors hover:text-white"
-              to="/privacy"
-            >
-              Privacy
+        {/* Bottom Copyright Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200/80 pt-8 text-xs font-medium text-slate-500">
+          <span>© 2026 RefactorQ Consulting LLP. All rights reserved.</span>
+          <div className="flex items-center gap-6">
+            <Link className="hover:text-indigo-600 transition-colors" to="/privacy">
+              Privacy Policy
             </Link>
-            <Link
-              className="text-xs text-slate-400 transition-colors hover:text-white"
-              to="/terms"
-            >
-              Terms
+            <Link className="hover:text-indigo-600 transition-colors" to="/terms">
+              Terms of Use
             </Link>
-            <span className="h-3.5 w-px bg-white/10" />
-            <a
-              aria-label="LinkedIn"
-              className="text-slate-400 transition-colors hover:text-white"
-              href="https://linkedin.com"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <LinkedInIcon />
+            <span className="text-slate-300">•</span>
+            <a className="hover:text-indigo-600 transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+              LinkedIn
             </a>
-            <a
-              aria-label="X (Twitter)"
-              className="text-slate-400 transition-colors hover:text-white"
-              href="https://x.com"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <XIcon />
+            <a className="hover:text-indigo-600 transition-colors" href="https://x.com" rel="noreferrer" target="_blank">
+              X (Twitter)
             </a>
           </div>
         </div>

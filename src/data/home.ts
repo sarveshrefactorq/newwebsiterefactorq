@@ -18,7 +18,7 @@ export const heroSlides = [
   {
     id: "engineering-credibility",
 
-    eyebrow: "Engineering depth",
+    eyebrow: "RefactorQ.AI",
 
     title:
       "Performance, cloud, quality, and security depth that supports long-term change.",
@@ -33,7 +33,7 @@ export const heroSlides = [
   {
     id: "products",
 
-    eyebrow: "Products",
+    eyebrow: "RefactorQ.AI",
 
     title:
       "Products that reflect how we build and operate intelligent systems.",

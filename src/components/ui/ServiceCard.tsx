@@ -3,97 +3,170 @@ import type { Service } from "../../types"
 
 // High-precision vector SVG icons for service lines
 function ServiceIcon({ slug }: { slug: string }) {
+  const iconClass = "h-5 w-5 stroke-current transition-transform duration-300 group-hover:scale-110"
   switch (slug) {
     case "ai-ml-engineering":
+      // AI Sparkles icon
       return (
-        <svg className="h-5.5 w-5.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 2.625a3.375 3.375 0 00-3.75-3.375m-3.75 3.375a3.375 3.375 0 013.75-3.375m0 0V4.5m0 0a3.375 3.375 0 00-3.375 3.375m3.375-3.375a3.375 3.375 0 013.375 3.375M5.25 12A3.75 3.75 0 019 8.25m-3.75 3.75A3.75 3.75 0 009 15.75m9.75-3.75A3.75 3.75 0 0015 8.25m3.75 3.75A3.75 3.75 0 0115 15.75" />
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
         </svg>
       )
     case "agentic-ai-automation":
+      // Agentic Bot / Microchip Automation icon
       return (
-        <svg className="h-5.5 w-5.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5m6 0V3m-3 0v1.5m-3 18V21m6 0v-1.5m-3 0V21m-6-15h16.5M3 12h18M3 18h18M6.75 6.75h10.5a.75.75 0 01.75.75v9a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75v-9a.75.75 0 01.75-.75z" />
         </svg>
       )
     case "cloud-devops-sre-engineering":
+      // Cloud Infrastructure icon
       return (
-        <svg className="h-5.5 w-5.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 00.435-7.475 4.5 4.5 0 00-7.801-4.225A4.5 4.5 0 002.25 15z" />
         </svg>
       )
-    case "quality-engineering-test-automation":
+    case "performance-engineering":
+      // Performance Speedometer Gauge icon
       return (
-        <svg className="h-5.5 w-5.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    case "quality-engineering-test-automation":
+      // Verified Quality Check icon
+      return (
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     case "cybersecurity-cloud-resilience":
     case "security-engineering":
+      // Security Shield Lock icon
       return (
-        <svg className="h-5.5 w-5.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751A11.959 11.959 0 0112 2.714z" />
         </svg>
       )
-    case "custom-software-engineering":
+    case "cloud-finops":
+      // FinOps Dollar Currency Analytics icon
       return (
-        <svg className="h-5.5 w-5.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     default:
+      // Custom Code Brackets icon
       return (
-        <svg className="h-5.5 w-5.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        <svg className={iconClass} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
         </svg>
       )
   }
 }
 
-export function ServiceCard({ service }: { service: Service }) {
+function getIconBoxTheme(slug: string) {
+  switch (slug) {
+    case "ai-ml-engineering":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    case "agentic-ai-automation":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    case "cloud-devops-sre-engineering":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    case "performance-engineering":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    case "quality-engineering-test-automation":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    case "cybersecurity-cloud-resilience":
+    case "security-engineering":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    case "cloud-finops":
+      return "bg-indigo-100/90 text-indigo-600 border border-indigo-200/60"
+    default:
+      return "bg-slate-100/90 text-slate-600 border border-slate-200/60"
+  }
+}
+
+export function ServiceCard({ service, dark }: { service: Service; dark?: boolean }) {
+  const iconTheme = getIconBoxTheme(service.slug)
+  const chips = (service.tools && service.tools.length >= 3 ? service.tools : service.includes).slice(0, 4)
+
   return (
     <Link
-      className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-7 backdrop-blur-md shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500/40 hover:shadow-[0_22px_50px_rgba(249,115,22,0.14)]"
       to={`/services/${service.slug}`}
+      className={`group relative flex flex-col justify-between rounded-[24px] p-6 sm:p-7 border shadow-xs transition-all duration-300 hover:border-[#5B5FEF] hover:shadow-[0_0_25px_rgba(91,95,239,0.35)] hover:-translate-y-1.5 h-full ${
+        dark
+          ? "bg-[#0e1622] border-white/10 text-white"
+          : "bg-white border-slate-200/80 text-slate-900"
+      }`}
     >
-      {/* Top Edge Ambient Highlight Line */}
-      <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
       <div>
-        {/* Card Header: Dark Obsidian Icon Tile + Monospace Badge */}
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-[#0c1827] via-[#11233b] to-[#0c1827] shadow-md shadow-black/20 transition-all duration-300 group-hover:scale-110 group-hover:border-orange-500/40 group-hover:shadow-lg group-hover:shadow-orange-500/20">
+        {/* Top Header: Left Pastel Icon Container & Right Action Hover Arrow */}
+        <div className="flex items-center justify-between mb-5">
+          {/* Pastel Icon Box */}
+          <div className={`flex h-11 w-11 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-105 ${iconTheme}`}>
             <ServiceIcon slug={service.slug} />
           </div>
-          <span className="rounded-full border border-orange-500/25 bg-orange-500/[0.08] px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-orange-600 shadow-2xs">
-            {service.shortTitle}
-          </span>
+
+          {/* Right Action Badge (Hover Arrow Icon) */}
+          <div className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 ${
+            dark
+              ? "bg-white/10 text-slate-300 group-hover:bg-[#5B5FEF] group-hover:text-white"
+              : "bg-slate-100 text-slate-600 group-hover:bg-[#5B5FEF] group-hover:text-white"
+          }`}>
+            <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </div>
         </div>
 
         {/* Title */}
-        <h3 className="mt-5 text-xl font-bold tracking-tight text-[var(--ink)] transition-colors duration-200 group-hover:text-orange-600">
+        <h3 className={`text-base sm:text-lg font-bold leading-snug tracking-tight mb-2.5 transition-colors duration-200 ${
+          dark ? "text-white group-hover:text-[#5B5FEF]" : "text-slate-900 group-hover:text-[#5B5FEF]"
+        }`}>
           {service.title}
         </h3>
 
-        {/* Summary */}
-        <p className="mt-3 text-sm leading-relaxed text-slate-600 font-normal">
+        {/* Summary Copy */}
+        <p className={`text-xs sm:text-sm leading-relaxed font-normal mb-5 ${
+          dark ? "text-slate-300" : "text-slate-600"
+        }`}>
           {service.summary}
         </p>
+
+        {/* 3-4 Keyword Chips */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {chips.map((chip) => (
+            <span
+              key={chip}
+              className={`rounded-full px-2.5 py-1 text-[11px] font-semibold border transition-colors ${
+                dark
+                  ? "bg-white/5 text-slate-300 border-white/10 group-hover:border-[#5B5FEF]/30"
+                  : "bg-slate-100 text-slate-700 border-slate-200/80 group-hover:border-[#5B5FEF]/30"
+              }`}
+            >
+              {chip}
+            </span>
+          ))}
+        </div>
       </div>
 
-      {/* Action Footer */}
-      <div className="mt-8 flex items-center justify-between border-t border-slate-100 pt-4 text-xs font-bold uppercase tracking-wider text-orange-600">
-        <span>Read service page</span>
-        <svg
-          className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2.5}
-        >
+      {/* Action Footer Arrow Link */}
+      <div className={`w-full py-2.5 px-4 rounded-xl sm:rounded-2xl font-medium text-xs sm:text-sm text-center transition-all duration-300 flex items-center justify-between ${
+        dark
+          ? "bg-white/5 text-slate-300 group-hover:bg-[#5B5FEF] group-hover:text-white"
+          : "bg-slate-100/90 text-slate-700 group-hover:bg-[#5B5FEF] group-hover:text-white"
+      }`}>
+        <span>Explore service</span>
+        <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
         </svg>
       </div>
     </Link>
   )
 }
+
+
+
+
+
