@@ -29,33 +29,47 @@ export function AboutPage() {
         <LogoStrip label="Work trusted across industries and operating models" />
       </section>
 
-      <section className="page-shell py-8">
-        <div className="grid gap-5 lg:grid-cols-2">
+      <section className="page-shell py-10">
+        <div className="grid gap-10 lg:grid-cols-2 xl:gap-14">
           <Reveal>
-            <article className="card h-full">
-              <span className="eyebrow">Mission</span>
-              <h2 className="card-title mt-4">
-                Practical execution over transformation language.
-              </h2>
-              <p className="card-copy">
-                Bring together AI systems thinking and practical engineering
-                execution so clients can modernise operations, improve delivery,
-                and build more capable products without buying into empty
-                transformation language.
-              </p>
+            <article className="dark-card relative h-full overflow-hidden group hover:-translate-y-1.5 transition-all duration-300">
+              {/* Subtle background glow effect */}
+              <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-indigo-500/20 blur-[50px] pointer-events-none group-hover:bg-indigo-500/30 transition-colors duration-500" />
+              
+              <div className="relative z-10">
+                <span className="inline-flex items-center rounded-full bg-indigo-500/20 border border-indigo-400/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-indigo-300">
+                  Mission
+                </span>
+                <h2 className="card-title mt-6 text-2xl !text-white leading-[1.3]">
+                  Practical execution over transformation language.
+                </h2>
+                <p className="card-copy mt-4 text-[15px] leading-[1.8] !text-slate-300">
+                  Bring together AI systems thinking and practical engineering
+                  execution so clients can modernise operations, improve delivery,
+                  and build more capable products without buying into empty
+                  transformation language.
+                </p>
+              </div>
             </article>
           </Reveal>
           <Reveal>
-            <article className="card h-full">
-              <span className="eyebrow">Footprint</span>
-              <h2 className="card-title mt-4">
-                A two-office delivery system, not a sales-and-outsource split.
-              </h2>
-              <p className="card-copy">
-                Dublin supports European market presence and leadership
-                visibility. Pune anchors engineering, quality, product, cloud,
-                and operational delivery. Both function as one delivery system.
-              </p>
+            <article className="dark-card relative h-full overflow-hidden group hover:-translate-y-1.5 transition-all duration-300">
+              {/* Subtle background glow effect */}
+              <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-emerald-500/10 blur-[50px] pointer-events-none group-hover:bg-emerald-500/20 transition-colors duration-500" />
+              
+              <div className="relative z-10">
+                <span className="inline-flex items-center rounded-full bg-emerald-500/20 border border-emerald-400/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-300">
+                  Footprint
+                </span>
+                <h2 className="card-title mt-6 text-2xl !text-white leading-[1.3]">
+                  A two-office delivery system, not a sales-and-outsource split.
+                </h2>
+                <p className="card-copy mt-4 text-[15px] leading-[1.8] !text-slate-300">
+                  Dublin supports European market presence and leadership
+                  visibility. Pune anchors engineering, quality, product, cloud,
+                  and operational delivery. Both function as one delivery system.
+                </p>
+              </div>
             </article>
           </Reveal>
         </div>
@@ -67,34 +81,56 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="page-shell py-24">
-        <SectionHeader
-          body="The existing site emphasises quick response, delivery rigour, and hands-on capability. This version turns those ideas into a more premium and specific narrative."
-          eyebrow="Why choose RefactorQ"
-          title="Practical advantages, not generic consulting claims."
-        />
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {[
-            [
-              "Performance-driven delivery",
-              "We focus on throughput, latency, release confidence, and operating leverage rather than abstract transformation language.",
-            ],
-            [
-              "Fast response, small-firm accountability",
-              "Leadership visibility and responsive execution are part of the operating model, not a sales promise.",
-            ],
-            [
-              "Professional range without platform sprawl",
-              "The offering is broad enough to solve the adjacent problem, but consolidated enough to stay coherent for buyers.",
-            ],
-          ].map(([title, body]) => (
-            <Reveal key={title}>
-              <article className="card h-full">
-                <h3 className="card-title">{title}</h3>
-                <p className="card-copy">{body}</p>
+      <section className="relative overflow-hidden bg-slate-50/50">
+        <div className="page-shell py-24 relative z-10">
+          <SectionHeader
+            body="The existing site emphasises quick response, delivery rigour, and hands-on capability. This version turns those ideas into a more premium and specific narrative."
+            eyebrow="Why choose RefactorQ"
+            title="Practical advantages, not generic consulting claims."
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <Reveal>
+              <article className="card h-full relative group hover:-translate-y-2 transition-all duration-300">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-600 group-hover:scale-110 group-hover:bg-indigo-100 group-hover:border-indigo-200 transition-all shadow-sm">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                  </svg>
+                </div>
+                <h3 className="card-title text-xl text-slate-900">Performance-driven delivery</h3>
+                <p className="card-copy mt-4 text-slate-600 leading-relaxed text-sm">
+                  We focus on throughput, latency, release confidence, and operating leverage rather than abstract transformation language.
+                </p>
               </article>
             </Reveal>
-          ))}
+
+            <Reveal>
+              <article className="card h-full relative group hover:-translate-y-2 transition-all duration-300">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 group-hover:scale-110 group-hover:bg-emerald-100 group-hover:border-emerald-200 transition-all shadow-sm">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="card-title text-xl text-slate-900">Fast response, accountability</h3>
+                <p className="card-copy mt-4 text-slate-600 leading-relaxed text-sm">
+                  Leadership visibility and responsive execution are part of the operating model, not a sales promise.
+                </p>
+              </article>
+            </Reveal>
+
+            <Reveal>
+              <article className="card h-full relative group hover:-translate-y-2 transition-all duration-300">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-rose-50 border border-rose-100 text-rose-600 group-hover:scale-110 group-hover:bg-rose-100 group-hover:border-rose-200 transition-all shadow-sm">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                  </svg>
+                </div>
+                <h3 className="card-title text-xl text-slate-900">Professional range without sprawl</h3>
+                <p className="card-copy mt-4 text-slate-600 leading-relaxed text-sm">
+                  The offering is broad enough to solve the adjacent problem, but consolidated enough to stay coherent for buyers.
+                </p>
+              </article>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -106,14 +142,18 @@ export function AboutPage() {
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {leadership.map((member) => (
             <Reveal key={member.name}>
-              <article className="team-card">
-                <img
-                  alt={member.name}
-                  className="team-image"
-                  src={member.image}
-                />
-                <h3 className="card-title mt-5">{member.name}</h3>
-                <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
+              <article className="team-card text-center relative group hover:-translate-y-1.5 transition-all duration-300">
+                {/* Profile Picture Container */}
+                <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full bg-gradient-to-b from-indigo-50 to-indigo-100/50 border-[6px] border-white shadow-[0_8px_24px_rgba(10,18,40,0.08)] group-hover:shadow-[0_12px_28px_rgba(99,102,241,0.15)] group-hover:border-indigo-50/50 transition-all duration-300">
+                  <img
+                    alt={member.name}
+                    className="h-full w-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    src={member.image}
+                  />
+                </div>
+                {/* Team Member Info */}
+                <h3 className="text-xl font-bold text-slate-900 tracking-tight">{member.name}</h3>
+                <p className="mt-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-indigo-600">
                   {member.role}
                 </p>
               </article>

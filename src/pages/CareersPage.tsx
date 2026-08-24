@@ -32,13 +32,34 @@ export function CareersPage() {
       <section className="page-shell py-24">
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {jobs.map((job) => (
-            <article className="card" key={job.title}>
-              <span className="tag">{job.team}</span>
-              <h2 className="card-title mt-4">{job.title}</h2>
-              <p className="mt-3 text-sm uppercase tracking-[0.18em] text-[var(--muted)]">
+            <article className="card relative overflow-hidden group hover:-translate-y-1 transition-all duration-300" key={job.title}>
+              {/* Premium Job Badge */}
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-indigo-100 bg-indigo-50/60 px-3.5 py-1.5 shadow-sm transition-colors group-hover:bg-indigo-50 group-hover:border-indigo-200">
+                {job.team === "Engineering" && (
+                  <svg className="h-3.5 w-3.5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                  </svg>
+                )}
+                {job.team === "Security" && (
+                  <svg className="h-3.5 w-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751A11.959 11.959 0 0112 2.714z" />
+                  </svg>
+                )}
+                {job.team === "Testing" && (
+                  <svg className="h-3.5 w-3.5 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-indigo-900">
+                  {job.team}
+                </span>
+              </div>
+              
+              <h2 className="card-title mt-6">{job.title}</h2>
+              <p className="mt-5 text-[12px] font-semibold uppercase tracking-widest text-slate-500">
                 {job.location}
               </p>
-              <p className="card-copy">{job.summary}</p>
+              <p className="card-copy mt-5 text-[14px] leading-relaxed text-slate-600">{job.summary}</p>
             </article>
           ))}
         </div>
