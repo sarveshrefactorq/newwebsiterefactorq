@@ -459,11 +459,11 @@ export function HomeHero() {
               }`}
             >
               <a
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#4f46e5] hover:bg-[#4338ca] px-7 py-3.5 text-[13px] font-bold tracking-wide text-white shadow-lg shadow-indigo-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-indigo-600/30 active:scale-[0.97]"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[#4f46e5] hover:bg-[#4338ca] px-7 py-3.5 text-[13px] font-bold tracking-wide !text-white text-white shadow-lg shadow-indigo-600/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-indigo-600/30 active:scale-[0.97]"
                 href={activeSlide.primary.href}
               >
-                {activeSlide.primary.label}
-                <svg className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <span className="!text-white text-white">{activeSlide.primary.label}</span>
+                <svg className="h-3.5 w-3.5 !text-white text-white stroke-white transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </a>
@@ -471,8 +471,8 @@ export function HomeHero() {
                 className="group inline-flex items-center gap-2.5 rounded-full border border-slate-300 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-slate-400 text-slate-700 px-7 py-3.5 text-[13px] font-bold tracking-wide shadow-sm transition-all duration-300"
                 href={activeSlide.secondary.href}
               >
-                {activeSlide.secondary.label}
-                <svg className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <span>{activeSlide.secondary.label}</span>
+                <svg className="h-3.5 w-3.5 text-slate-700 stroke-slate-700 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </a>

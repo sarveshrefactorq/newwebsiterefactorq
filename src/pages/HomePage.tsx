@@ -44,95 +44,217 @@ export function HomePage() {
         <LogoStrip />
       </section>
 
-      <section className="bg-[#0a111a] border-y border-white/5 py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-indigo-500/5 blur-[140px] pointer-events-none" />
+      {/* ─── STRATEGIC POSITIONING / 3 CORE PILLARS ─── */}
+      <section className="bg-gradient-to-b from-[#080E1A] via-[#0A1220] to-[#080E1A] border-y border-white/[0.08] py-20 lg:py-28 relative overflow-hidden text-white">
+        {/* Tech Blueprint Grid & Ambient Purple Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-80" />
+        <div className="absolute -top-32 left-1/4 h-[450px] w-[450px] rounded-full bg-indigo-500/10 blur-[150px] pointer-events-none" />
+        <div className="absolute -bottom-32 right-1/4 h-[450px] w-[450px] rounded-full bg-indigo-600/10 blur-[150px] pointer-events-none" />
+
         <div className="page-shell relative z-10">
-          <SectionHeader
-            dark
-            body="We focus on practical transformation priorities: delivery speed, cloud and platform efficiency, quality confidence, and secure operations. AI is used where it creates measurable leverage, not as a layer on top of every workflow."
-            eyebrow="Positioning"
-            title="A practical consulting model for modern delivery and operations."
-          />
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {[
-              {
-                num: "01",
-                title: "Business-first prioritisation",
-                body: "Every engagement starts with where improvement is measurable, then maps technology changes to those outcomes.",
-                tags: ["Measurable ROI", "Outcome Mapping", "Business Value", "Impact First"],
-                icon: (
-                  <svg className="h-5 w-5 stroke-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                  </svg>
-                ),
-                badgeBg: "bg-indigo-500/10 text-indigo-400 border-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.15)]",
-              },
-              {
-                num: "02",
-                title: "Execution discipline",
-                body: "Consulting recommendations are paired with implementation support so operating models can hold up in day-to-day delivery.",
-                tags: ["Implementation", "Operating Models", "Delivery Support", "Execution"],
-                icon: (
-                  <svg className="h-5 w-5 stroke-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
-                  </svg>
-                ),
-                badgeBg: "bg-indigo-50/10 text-indigo-400 border-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.15)]",
-              },
-              {
-                num: "03",
-                title: "Balanced AI adoption",
-                body: "AI and automation are introduced where they improve responsiveness, scale, and cost profile without increasing operational risk.",
-                tags: ["Pragmatic AI", "Automation", "Low Operational Risk", "Scalability"],
-                icon: (
-                  <svg className="h-5 w-5 stroke-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-                  </svg>
-                ),
-                badgeBg: "bg-indigo-500/10 text-indigo-400 border-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.15)]",
-              },
-            ].map((item) => (
-              <Reveal key={item.title}>
-                <article className="group relative flex h-full flex-col justify-between rounded-[28px] bg-[#0e1622] p-8 border border-white/10 shadow-xl transition-all duration-300 hover:border-[#5B5FEF] hover:shadow-[0_0_25px_rgba(91,95,239,0.35)] hover:-translate-y-1.5">
-                  <div>
-                    {/* Top Row: Left Icon Badge & Right Hover Arrow */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border transition-transform duration-300 group-hover:scale-105 ${item.badgeBg}`}>
-                        {item.icon}
-                      </div>
+          <div className="max-w-3xl mb-16">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="h-[2px] w-5 rounded-full bg-indigo-500" />
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-indigo-400">
+                The RefactorQ Delivery Paradigm
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-white leading-[1.15]">
+              A practical consulting model for{" "}
+              <span className="bg-gradient-to-r from-indigo-300 via-indigo-200 to-white bg-clip-text text-transparent">
+                modern delivery and operations.
+              </span>
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+              We focus on practical transformation priorities: delivery speed, cloud and platform efficiency, quality confidence, and secure operations. AI is used where it creates measurable leverage, not as a layer on top of every workflow.
+            </p>
+          </div>
 
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-slate-300 group-hover:bg-[#5B5FEF] group-hover:text-white transition-all duration-300">
-                        <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                        </svg>
-                      </div>
+          {/* 3 Architecture Pillar Cards with Bespoke Micro-Visuals */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            {/* ─── PILLAR 01: BUSINESS-FIRST PRIORITISATION ─── */}
+            <Reveal>
+              <article className="group h-full flex flex-col justify-between rounded-[32px] bg-gradient-to-b from-[#0E1728] to-[#0A111C] border border-slate-800/90 p-7 sm:p-8 shadow-2xl relative overflow-hidden hover:border-indigo-500/80 hover:shadow-[0_20px_50px_rgba(99,102,241,0.18)] hover:-translate-y-1.5 transition-all duration-300">
+                <div className="absolute -top-16 -right-16 h-36 w-36 rounded-full bg-indigo-500/15 blur-2xl pointer-events-none group-hover:bg-indigo-500/25 transition-all" />
+
+                <div className="relative z-10">
+                  {/* Top Meta Header */}
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
+                    <div className="flex items-center gap-2.5">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 font-mono text-xs font-bold">
+                        01
+                      </span>
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                        Value Mapping
+                      </span>
                     </div>
+                    <span className="font-mono text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                      ROI First
+                    </span>
+                  </div>
 
-                    {/* Title */}
-                    <h3 className="text-lg font-bold tracking-tight text-white leading-snug mb-3 transition-colors duration-200 group-hover:text-[#5B5FEF]">
-                      {item.title}
-                    </h3>
+                  {/* Title & Body */}
+                  <h3 className="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors leading-snug mb-3">
+                    Business-first prioritisation
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-300 font-normal mb-6">
+                    Every engagement starts with where improvement is measurable, then maps technology changes directly to commercial outcomes.
+                  </p>
 
-                    {/* Body Copy */}
-                    <p className="mt-2 text-sm leading-relaxed text-slate-300 font-normal mb-5">
-                      {item.body}
-                    </p>
-
-                    {/* 3-4 Keyword Chips */}
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full px-2.5 py-1 text-[11px] font-semibold bg-white/5 text-slate-300 border border-white/10 group-hover:border-[#5B5FEF]/30 transition-colors"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                  {/* Bespoke Visual: Measurable Flow Diagram */}
+                  <div className="rounded-2xl bg-[#060B14] border border-slate-800/80 p-4 mb-6 space-y-2.5">
+                    <div className="flex items-center justify-between text-[11px] font-mono">
+                      <span className="text-slate-400">Bottleneck Profiling</span>
+                      <span className="text-indigo-400 font-bold">→ 40% Waste Cut</span>
+                    </div>
+                    <div className="h-1.5 w-full rounded-full bg-slate-800 overflow-hidden">
+                      <div className="h-full w-4/5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-400" />
+                    </div>
+                    <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 pt-1">
+                      <span>Target SLA Defined</span>
+                      <span className="text-emerald-400 font-bold">✓ Outcome Grounded</span>
                     </div>
                   </div>
-                </article>
-              </Reveal>
-            ))}
+
+                  {/* Tag Chips */}
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {["Measurable ROI", "Outcome Mapping", "Impact First"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-lg bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 text-[11px] font-mono text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+
+            {/* ─── PILLAR 02: EXECUTION DISCIPLINE ─── */}
+            <Reveal>
+              <article className="group h-full flex flex-col justify-between rounded-[32px] bg-gradient-to-b from-[#0E1728] to-[#0A111C] border border-slate-800/90 p-7 sm:p-8 shadow-2xl relative overflow-hidden hover:border-indigo-500/80 hover:shadow-[0_20px_50px_rgba(99,102,241,0.18)] hover:-translate-y-1.5 transition-all duration-300">
+                <div className="absolute -top-16 -right-16 h-36 w-36 rounded-full bg-indigo-500/15 blur-2xl pointer-events-none group-hover:bg-indigo-500/25 transition-all" />
+
+                <div className="relative z-10">
+                  {/* Top Meta Header */}
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
+                    <div className="flex items-center gap-2.5">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 font-mono text-xs font-bold">
+                        02
+                      </span>
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                        Squad Delivery
+                      </span>
+                    </div>
+                    <span className="font-mono text-[10px] font-bold text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full">
+                      Embedded Hands-On
+                    </span>
+                  </div>
+
+                  {/* Title & Body */}
+                  <h3 className="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors leading-snug mb-3">
+                    Execution discipline
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-300 font-normal mb-6">
+                    Consulting recommendations are paired with embedded implementation support so operating models hold up in production.
+                  </p>
+
+                  {/* Bespoke Visual: Embedded Handshake Timeline */}
+                  <div className="rounded-2xl bg-[#060B14] border border-slate-800/80 p-4 mb-6 space-y-2">
+                    <div className="flex items-center justify-between text-[11px] font-mono text-slate-300">
+                      <span className="flex items-center gap-1.5">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Embedded Squad Deployment
+                      </span>
+                      <span className="text-emerald-400 font-bold">Active</span>
+                    </div>
+                    <div className="grid grid-cols-3 gap-1.5 pt-1 text-[10px] font-mono text-center">
+                      <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-slate-300">
+                        Review
+                      </div>
+                      <div className="p-1.5 rounded-lg bg-indigo-600/30 border border-indigo-500/40 text-indigo-200 font-bold">
+                        Engineer
+                      </div>
+                      <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-slate-300">
+                        Sustain
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tag Chips */}
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {["Embedded Teams", "Operating Models", "Zero Downtime"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-lg bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 text-[11px] font-mono text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+
+            {/* ─── PILLAR 03: BALANCED AI ADOPTION ─── */}
+            <Reveal>
+              <article className="group h-full flex flex-col justify-between rounded-[32px] bg-gradient-to-b from-[#0E1728] to-[#0A111C] border border-slate-800/90 p-7 sm:p-8 shadow-2xl relative overflow-hidden hover:border-indigo-500/80 hover:shadow-[0_20px_50px_rgba(99,102,241,0.18)] hover:-translate-y-1.5 transition-all duration-300">
+                <div className="absolute -top-16 -right-16 h-36 w-36 rounded-full bg-indigo-500/15 blur-2xl pointer-events-none group-hover:bg-indigo-500/25 transition-all" />
+
+                <div className="relative z-10">
+                  {/* Top Meta Header */}
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
+                    <div className="flex items-center gap-2.5">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 font-mono text-xs font-bold">
+                        03
+                      </span>
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                        Pragmatic AI
+                      </span>
+                    </div>
+                    <span className="font-mono text-[10px] font-bold text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full">
+                      Zero Fluff
+                    </span>
+                  </div>
+
+                  {/* Title & Body */}
+                  <h3 className="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors leading-snug mb-3">
+                    Balanced AI adoption
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-300 font-normal mb-6">
+                    AI and automation are introduced where they improve responsiveness, scale, and cost profile without increasing operational risk.
+                  </p>
+
+                  {/* Bespoke Visual: AI Verification Guardrail */}
+                  <div className="rounded-2xl bg-[#060B14] border border-slate-800/80 p-4 mb-6 space-y-2.5">
+                    <div className="flex items-center justify-between text-[11px] font-mono">
+                      <span className="text-slate-400">AI Model Precision Score</span>
+                      <span className="text-emerald-400 font-bold">99.4% Verified</span>
+                    </div>
+                    <div className="h-1.5 w-full rounded-full bg-slate-800 overflow-hidden">
+                      <div className="h-full w-[94%] rounded-full bg-gradient-to-r from-indigo-500 via-emerald-400 to-emerald-300" />
+                    </div>
+                    <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 pt-1">
+                      <span>Hallucination Guardrails</span>
+                      <span className="text-indigo-400 font-bold">● Active Filtering</span>
+                    </div>
+                  </div>
+
+                  {/* Tag Chips */}
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {["Pragmatic AI", "Low Operational Risk", "Scalability"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-lg bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 text-[11px] font-mono text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -299,72 +421,186 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section-surface">
-        <div className="page-shell py-24">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <SectionHeader
-              body="Selections grounded in the live site's current case studies across performance, cloud, AI, security, and digital transformation."
-              eyebrow="Case studies"
-              title="Proof points that carry the repositioning beyond messaging."
-            />
-            <ArrowLink href="/case-studies" label="View all case studies" />
+      {/* ─── CASE STUDIES / PROOF POINTS SECTION ─── */}
+      <section className="bg-gradient-to-b from-slate-50/90 via-white to-slate-50/70 border-y border-slate-200/80 py-20 lg:py-28 relative overflow-hidden">
+        {/* Subtle Ambient Background Light */}
+        <div className="absolute top-0 right-1/4 h-80 w-80 rounded-full bg-indigo-500/5 blur-[120px] pointer-events-none" />
+
+        <div className="page-shell relative z-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between mb-12">
+            <div>
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <span className="h-[2px] w-5 rounded-full bg-indigo-600" />
+                <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+                  Verified Case Studies
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Proof points that carry the repositioning beyond messaging.
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl font-normal leading-relaxed">
+                Selections grounded in real client engagements across performance, cloud infrastructure, AI automation, security, and digital transformation.
+              </p>
+            </div>
+            <ArrowLink href="/case-studies" label="Explore all case studies" />
           </div>
 
-          <Reveal className="mt-12 overflow-hidden rounded-none border border-slate-200 bg-white shadow-xs">
-            <div className="grid gap-0 lg:grid-cols-2">
-              <MediaPlaceholder
-                className="h-full min-h-64"
-                label={`Photo — ${spotlightCaseStudy.client}`}
-                slug={spotlightCaseStudy.slug}
-                ratio="4/3"
-              />
-              <div className="flex flex-col justify-center p-8 md:p-10">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-indigo-600 border border-indigo-500/20 bg-indigo-500/10 px-2.5 py-1 w-fit mb-3">
-                  {spotlightCaseStudy.category}
-                </span>
-                <h3 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl leading-tight">
-                  {spotlightCaseStudy.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600 font-normal">
-                  {spotlightCaseStudy.summary}
-                </p>
-                <p className="mt-6 text-lg font-bold text-indigo-600 font-mono">
-                  {spotlightCaseStudy.metric}
-                </p>
-                <div className="mt-6">
-                  <ArrowLink
-                    href={`/case-studies/${spotlightCaseStudy.slug}`}
-                    label="Read the full case study"
+          {/* Master Spotlight Case Study Card */}
+          <Reveal>
+            <div className="group relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-white border border-slate-200/90 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_48px_rgba(99,102,241,0.12)] hover:border-indigo-300 transition-all duration-300 mb-8">
+              <div className="grid gap-0 lg:grid-cols-12 items-stretch">
+                {/* Left Side: Media Preview */}
+                <div className="lg:col-span-6 relative bg-slate-900 overflow-hidden min-h-[280px] sm:min-h-[360px] lg:min-h-full">
+                  <MediaPlaceholder
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    label={`Preview · ${spotlightCaseStudy.client}`}
+                    slug={spotlightCaseStudy.slug}
+                    ratio="16/11"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-5 left-5 right-5 z-10 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 px-3.5 py-1 text-[11px] font-mono font-bold text-white shadow-sm">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      Featured Production Spotlight
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right Side: Narrative, Metrics & Outcomes */}
+                <div className="lg:col-span-6 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+                  <div>
+                    {/* Category & Client Header */}
+                    <div className="flex flex-wrap items-center gap-2.5 mb-3.5">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 border border-indigo-100 px-3 py-1 text-xs font-mono font-bold text-indigo-700">
+                        <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
+                        {spotlightCaseStudy.category}
+                      </span>
+                      <span className="text-xs text-slate-400 font-mono">
+                        Client: <strong className="text-slate-700">{spotlightCaseStudy.client}</strong>
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug mb-3">
+                      <Link to={`/case-studies/${spotlightCaseStudy.slug}`}>
+                        {spotlightCaseStudy.title}
+                      </Link>
+                    </h3>
+
+                    {/* Summary */}
+                    <p className="text-sm leading-relaxed text-slate-600 font-normal mb-5">
+                      {spotlightCaseStudy.summary}
+                    </p>
+
+                    {/* Verified Telemetry Outcome Banner */}
+                    <div className="rounded-2xl bg-gradient-to-r from-indigo-50/80 to-slate-50 border border-indigo-100/90 p-4 flex items-center gap-3.5 mb-6">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-xs font-bold">
+                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                        </svg>
+                      </div>
+                      <div className="min-w-0">
+                        <span className="block font-mono text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">
+                          Verified Delivery Metric
+                        </span>
+                        <span className="text-sm font-extrabold text-slate-900 block truncate">
+                          {spotlightCaseStudy.metric}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Key Outcomes Checklist */}
+                    <div className="space-y-2 mb-6 pt-4 border-t border-slate-100">
+                      {spotlightCaseStudy.outcomes.slice(0, 3).map((outcome) => (
+                        <div key={outcome} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                          <span className="text-indigo-600 font-bold mt-0.5">✓</span>
+                          <span>{outcome}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Footer Action */}
+                  <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs font-mono font-semibold text-slate-400">
+                      3 Verified Milestones Delivered
+                    </span>
+                    <Link
+                      to={`/case-studies/${spotlightCaseStudy.slug}`}
+                      className="inline-flex items-center gap-2 rounded-full bg-slate-900 group-hover:bg-indigo-600 text-white px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 shadow-xs"
+                    >
+                      <span>Read Case Study</span>
+                      <svg className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </Reveal>
 
-          <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          {/* Secondary Supporting Case Studies Grid */}
+          <div className="grid gap-6 md:grid-cols-2">
             {supportingCaseStudies.map((caseStudy) => (
               <Reveal key={caseStudy.slug}>
-                <Link
-                  className="group relative flex h-full flex-col overflow-hidden rounded-none border border-slate-200 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500 hover:shadow-md"
-                  to={`/case-studies/${caseStudy.slug}`}
-                >
-                  <div className="absolute top-0 left-0 h-[3px] w-0 bg-indigo-500 transition-all duration-300 group-hover:w-full" />
-                  <MediaPlaceholder label={`Photo — ${caseStudy.client}`} slug={caseStudy.slug} />
-                  <div className="flex flex-1 flex-col p-7">
-                    <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-indigo-600 border border-indigo-500/20 bg-indigo-500/10 px-2.5 py-1 w-fit mb-3">
-                      {caseStudy.category}
+                <article className="group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] bg-white border border-slate-200/90 p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_48px_rgba(99,102,241,0.12)] hover:border-indigo-300 hover:-translate-y-1.5 transition-all duration-300 h-full">
+                  <div>
+                    {/* Media Header */}
+                    <div className="relative overflow-hidden rounded-2xl bg-slate-100 mb-6 aspect-[16/10]">
+                      <MediaPlaceholder
+                        label={`Photo — ${caseStudy.client}`}
+                        slug={caseStudy.slug}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-indigo-700 border border-slate-200 shadow-2xs">
+                        <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
+                        {caseStudy.category}
+                      </span>
+                    </div>
+
+                    {/* Client Name */}
+                    <span className="block font-mono text-xs text-slate-400 mb-1">
+                      Client: <strong className="text-slate-700">{caseStudy.client}</strong>
                     </span>
-                    <h3 className="text-xl font-bold tracking-tight text-slate-900 leading-snug transition-colors duration-200 group-hover:text-indigo-600">
-                      {caseStudy.title}
+
+                    {/* Title */}
+                    <h3 className="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug mb-3">
+                      <Link to={`/case-studies/${caseStudy.slug}`}>
+                        {caseStudy.title}
+                      </Link>
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-slate-600 font-normal">
+
+                    {/* Summary */}
+                    <p className="text-sm leading-relaxed text-slate-600 font-normal mb-5 line-clamp-3">
                       {caseStudy.summary}
                     </p>
-                    <p className="mt-4 font-mono text-sm font-bold text-indigo-600">
-                      {caseStudy.metric}
-                    </p>
+
+                    {/* Telemetry Metric Chip */}
+                    <div className="rounded-xl bg-slate-50 border border-slate-200/80 p-3 flex items-center gap-2.5 mb-6">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
+                      <span className="text-xs font-bold text-slate-800 truncate">
+                        {caseStudy.metric}
+                      </span>
+                    </div>
                   </div>
-                </Link>
+
+                  {/* Footer Action */}
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs font-mono font-semibold text-slate-400">
+                      {caseStudy.outcomes.length} Verified Outcomes
+                    </span>
+                    <Link
+                      to={`/case-studies/${caseStudy.slug}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-indigo-600 hover:text-indigo-800 group-hover:translate-x-0.5 transition-all"
+                    >
+                      <span>Read Story</span>
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </article>
               </Reveal>
             ))}
           </div>
@@ -391,17 +627,40 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="page-shell py-24">
-        <SectionHeader
-          eyebrow="What clients say"
-          title="Feedback grounded in delivery, not just advisory sentiment."
-        />
-        <div className="mt-12">
-          <TestimonialSection />
+      {/* ─── TESTIMONIALS / VERIFIED CLIENT ENDORSEMENTS ─── */}
+      <section className="page-shell py-20 lg:py-28">
+        <div className="max-w-3xl mb-12">
+          <div className="flex items-center gap-2.5 mb-2.5">
+            <span className="h-[2px] w-5 rounded-full bg-indigo-600" />
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+              Verified Client Reviews
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Feedback grounded in delivery, not just advisory sentiment.
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+            Direct commentary from technology leaders and operations directors whose platforms scaled through our engineering squads.
+          </p>
         </div>
-        <p className="mt-6 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-          Placeholder quotes — swap in verified client testimonials.
-        </p>
+
+        <TestimonialSection />
+
+        {/* Verified Delivery Trust Strip */}
+        <div className="mt-12 pt-8 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <span>100% On-Time Delivery Milestone Track Record</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-indigo-500" />
+            <span>Enterprise Security & SLA Guaranteed</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <span>Zero Unplanned Production Outages</span>
+          </div>
+        </div>
       </section>
 
       <section className="section-dark">

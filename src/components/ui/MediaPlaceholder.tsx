@@ -48,6 +48,15 @@ const CASE_STUDY_PHOTO_MAP: Record<string, string> = {
   
   // E-Commerce Retail Platform
   "e-commerce-platform-retail": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1000&q=80",
+
+  // Service Practices
+  "cloud-devops-sre-engineering": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+  "ai-ml-engineering": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80",
+  "agentic-ai-automation": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+  "cybersecurity-cloud-resilience": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+  "security-engineering": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+  "cloud-finops": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  "quality-engineering-test-automation": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
 }
 
 function getMediaImage(slug?: string, label?: string): string {
