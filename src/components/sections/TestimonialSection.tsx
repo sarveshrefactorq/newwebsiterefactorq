@@ -5,31 +5,17 @@ import { Reveal } from "../ui/Reveal"
    Engagement domain metadata for each testimonial
    ───────────────────────────────────────────────────────────── */
 const TESTIMONIAL_METADATA = [
-  {
-    domain: "Healthcare SaaS Platform",
-    scope: "Performance SLA & Remediation",
-    metric: "40% p99 Latency Cut",
-  },
-  {
-    domain: "Pan-India Support Ops",
-    scope: "Workflow Automation & AI",
-    metric: "65% Manual Workload Drop",
-  },
-  {
-    domain: "Enterprise EdTech Provider",
-    scope: "Platform Reliability & QA",
-    metric: "<5 min Incident SLA",
-  },
+  { domain: "Healthcare SaaS Platform" },
+  { domain: "Pan-India Support Ops" },
+  { domain: "Enterprise EdTech Provider" },
 ]
 
 export function TestimonialSection() {
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+    <div className="grid gap-6 md:grid-cols-2 items-stretch">
       {testimonials.map((testimonial, idx) => {
         const meta = TESTIMONIAL_METADATA[idx] || {
           domain: "Enterprise Technology",
-          scope: "Engineering Delivery",
-          metric: "Verified SLA",
         }
 
         return (
@@ -39,22 +25,11 @@ export function TestimonialSection() {
           >
             <article className="group h-full flex flex-col justify-between rounded-[28px] sm:rounded-[32px] bg-white border border-slate-200/90 p-7 sm:p-9 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_48px_rgba(99,102,241,0.1)] hover:border-indigo-300 hover:-translate-y-1.5 transition-all duration-300">
               <div>
-                {/* Top Row: Domain Tag & Verified Rating */}
-                <div className="flex items-center justify-between gap-2 mb-6 pb-4 border-b border-slate-100">
+                {/* Top Row: Domain Tag */}
+                <div className="flex items-center gap-2 mb-6 pb-4 border-b border-slate-100">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 border border-indigo-100/90 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-indigo-700">
                     <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
                     {meta.domain}
-                  </span>
-                  <div className="flex items-center gap-1 text-amber-400 text-xs font-mono font-bold">
-                    <span>★★★★★</span>
-                  </div>
-                </div>
-
-                {/* Scope & Metric Pill */}
-                <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-5">
-                  <span className="font-semibold text-slate-600">{meta.scope}</span>
-                  <span className="text-emerald-600 font-bold bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-md text-[10px]">
-                    {meta.metric}
                   </span>
                 </div>
 
@@ -78,11 +53,6 @@ export function TestimonialSection() {
                       {testimonial.role}
                     </p>
                   </div>
-                </div>
-
-                <div className="hidden sm:flex items-center gap-1 text-[10px] font-mono font-bold text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-2 py-1 rounded-full">
-                  <span>✓</span>
-                  <span>Verified</span>
                 </div>
               </div>
             </article>

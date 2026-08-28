@@ -35,7 +35,7 @@ export function AboutPage() {
             <article className="dark-card relative h-full overflow-hidden group hover:-translate-y-1.5 transition-all duration-300">
               {/* Subtle background glow effect */}
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-indigo-500/20 blur-[50px] pointer-events-none group-hover:bg-indigo-500/30 transition-colors duration-500" />
-              
+
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-full bg-indigo-500/20 border border-indigo-400/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-indigo-300">
                   Mission
@@ -56,7 +56,7 @@ export function AboutPage() {
             <article className="dark-card relative h-full overflow-hidden group hover:-translate-y-1.5 transition-all duration-300">
               {/* Subtle background glow effect */}
               <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-emerald-500/10 blur-[50px] pointer-events-none group-hover:bg-emerald-500/20 transition-colors duration-500" />
-              
+
               <div className="relative z-10">
                 <span className="inline-flex items-center rounded-full bg-emerald-500/20 border border-emerald-400/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-300">
                   Footprint

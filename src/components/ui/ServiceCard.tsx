@@ -184,7 +184,6 @@ export function ServiceCard({
   dark?: boolean
 }) {
   const iconBg = getIconBackgroundTheme(service.slug)
-  const chips = (service.tools && service.tools.length >= 3 ? service.tools : service.includes).slice(0, 4)
 
   return (
     <Link
@@ -240,57 +239,14 @@ export function ServiceCard({
           {service.title}
         </h3>
 
-        {/* Value Proposition Tagline */}
-        {service.tagline && (
-          <p className="text-xs font-semibold text-indigo-600/90 dark:text-indigo-400/90 mb-3 font-mono leading-relaxed line-clamp-1">
-            {service.tagline}
-          </p>
-        )}
-
         {/* Summary Description */}
         <p
-          className={`text-sm leading-relaxed font-normal mb-5 line-clamp-3 ${
+          className={`text-sm leading-relaxed font-normal mb-6 line-clamp-2 ${
             dark ? "text-slate-300" : "text-slate-600"
           }`}
         >
           {service.summary}
         </p>
-
-        {/* Included Capabilities Micro-Checklist */}
-        {service.includes && service.includes.length > 0 && (
-          <div className="mb-5 space-y-2 border-t border-slate-100 dark:border-white/5 pt-4">
-            {service.includes.slice(0, 2).map((item) => (
-              <div key={item} className="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
-                <svg
-                  className="h-3.5 w-3.5 text-indigo-500 shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-                <span className="line-clamp-1">{item}</span>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Tech Stack & Tooling Chips */}
-        <div className="flex flex-wrap gap-1.5 mb-6">
-          {chips.map((chip) => (
-            <span
-              key={chip}
-              className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-mono font-semibold border transition-colors ${
-                dark
-                  ? "bg-white/5 text-slate-300 border-white/10 group-hover:border-indigo-500/40"
-                  : "bg-slate-50 text-slate-700 border-slate-200/80 group-hover:bg-indigo-50/50 group-hover:text-indigo-700 group-hover:border-indigo-200"
-              }`}
-            >
-              {chip}
-            </span>
-          ))}
-        </div>
       </div>
 
       {/* Action Footer CTA Bar */}

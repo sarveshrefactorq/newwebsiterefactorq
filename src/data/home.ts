@@ -6,7 +6,7 @@ export const heroSlides = [
 
     eyebrow: "RefactorQ.AI",
 
-    title: "Consulting that turns AI potential into operational results.",
+    title: "Consulting that turns AI potential into operational results",
 
     text: "We help organisations apply AI where it improves response time, delivery throughput, and customer experience, while keeping engineering quality and control intact.",
 

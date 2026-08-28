@@ -7,7 +7,6 @@ import { products } from "../data/products"
 import { caseStudies } from "../data/caseStudies"
 import { blogPosts } from "../data/blogPosts"
 import { aviationFocusAreas } from "../data/home"
-import { companyStats } from "../data/clients"
 
 import { usePageMeta } from "../lib/meta"
 
@@ -23,7 +22,6 @@ import { ServiceCard } from "../components/ui/ServiceCard"
 import { ProductCard } from "../components/ui/ProductCard"
 import { AviationFocusCard } from "../components/ui/AviationFocusCard"
 import { BlogCard } from "../components/ui/BlogCard"
-import { StatBand } from "../components/ui/StatBand"
 
 export function HomePage() {
   usePageMeta(
@@ -645,28 +643,6 @@ export function HomePage() {
         </div>
 
         <TestimonialSection />
-
-        {/* Verified Delivery Trust Strip */}
-        <div className="mt-12 pt-8 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500">
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>100% On-Time Delivery Milestone Track Record</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-indigo-500" />
-            <span>Enterprise Security & SLA Guaranteed</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>Zero Unplanned Production Outages</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-dark">
-        <div className="page-shell py-20">
-          <StatBand stats={companyStats} />
-        </div>
       </section>
     </>
   )

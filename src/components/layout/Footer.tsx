@@ -124,36 +124,12 @@ export function Footer() {
               Tell us where delivery slows down, where scale gets expensive, or where AI can create operational lift. We will bring a point of view and a plan.
             </p>
 
-            {/* Email / Action Form Row */}
-            <form onSubmit={(e) => { e.preventDefault(); window.location.href = BOOKING_URL }} className="w-full max-w-xl mb-4">
-              <div className="flex flex-col sm:flex-row items-center gap-2 p-1.5 bg-white rounded-2xl sm:rounded-full border border-slate-200 shadow-md focus-within:ring-2 focus-within:ring-indigo-500/20 focus-within:border-indigo-500/40 transition-all">
-                <div className="flex items-center gap-3 flex-1 min-w-0 pl-4 pr-2 py-1.5 w-full">
-                  <svg className="h-5 w-5 shrink-0 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M3 6.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-11Z" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="m3.5 6 8.5 6.5L20.5 6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <input
-                    type="email"
-                    placeholder="Your company email"
-                    required
-                    className="w-full text-sm text-slate-800 placeholder-slate-400 bg-transparent focus:outline-none font-medium"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto shrink-0 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-3 text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-indigo-600/25 transition-all duration-200 active:scale-95 cursor-pointer whitespace-nowrap"
-                >
-                  Book a consultation →
-                </button>
-              </div>
-            </form>
-
-            {/* Secondary Action */}
+            {/* Primary Action */}
             <a
               href={BOOKING_URL}
-              className="text-xs text-slate-600 hover:text-indigo-600 font-semibold transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-indigo-600/25 transition-all duration-200 active:scale-95 cursor-pointer whitespace-nowrap"
             >
-              Request a demo
+              Book a consultation →
             </a>
           </div>
         </div>

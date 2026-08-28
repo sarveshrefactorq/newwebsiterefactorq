@@ -307,37 +307,12 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
 export function HomeHero() {
   const reducedMotion = useReducedMotionPreference()
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const [transitioning, setTransitioning] = useState(false)
   const parallaxRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (paused || reducedMotion) {
-      return
-    }
-
-    const interval = window.setInterval(() => {
-      setTransitioning(true)
-      setTimeout(() => {
-        setActiveIndex((current) => (current + 1) % heroSlides.length)
-        setTransitioning(false)
-      }, 300)
-    }, 6000)
-
-    return () => window.clearInterval(interval)
-  }, [paused, reducedMotion])
-
-  const activeSlide = heroSlides[activeIndex]
-
-  const handleSlideChange = (index: number) => {
-    if (index === activeIndex) return
-    setTransitioning(true)
-    setTimeout(() => {
-      setActiveIndex(index)
-      setTransitioning(false)
-    }, 200)
-  }
+  // Fixed lead message — a single committed headline reads stronger
+  // than a rotating carousel, so the hero no longer auto-advances.
+  const activeSlide = heroSlides[0]
+  const transitioning = false
 
   // 3D cursor tilt for a tactile, premium feel
   const handleParallax = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -360,19 +335,6 @@ export function HomeHero() {
       aria-label="Homepage hero"
       className="relative overflow-hidden border-b border-slate-200/60"
       style={{ background: "#FAFBFD" }}
-      onKeyDown={(event) => {
-        if (event.key === "ArrowRight") {
-          handleSlideChange((activeIndex + 1) % heroSlides.length)
-        }
-        if (event.key === "ArrowLeft") {
-          handleSlideChange(
-            (activeIndex - 1 + heroSlides.length) % heroSlides.length,
-          )
-        }
-      }}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      tabIndex={0}
     >
       {/* ── Faint blueprint grid (adds depth, concentrated top-right) ── */}
       <div
@@ -478,22 +440,6 @@ export function HomeHero() {
               </a>
             </div>
 
-            {/* Slide selector */}
-            <div className="mt-9 flex items-center gap-2">
-              {heroSlides.map((slide, index) => (
-                <button
-                  key={slide.id}
-                  className={`relative rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? "w-10 h-1.5 bg-indigo-500"
-                      : "w-5 h-1.5 bg-slate-300 hover:bg-slate-400"
-                  }`}
-                  onClick={() => handleSlideChange(index)}
-                  type="button"
-                  aria-label={`Slide ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
 
           {/* ─── RIGHT: "Refactor" visual (3D tilt + per-slide live morph) ─── */}
@@ -512,7 +458,7 @@ export function HomeHero() {
                   transitioning ? "opacity-50 scale-[0.98]" : "opacity-100 scale-100"
                 }`}
               >
-                <RefactorVisual index={activeIndex} reducedMotion={reducedMotion} />
+                <RefactorVisual index={0} reducedMotion={reducedMotion} />
               </div>
             </div>
           </div>

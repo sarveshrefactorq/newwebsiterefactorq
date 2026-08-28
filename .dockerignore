@@ -1,0 +1,27 @@
+node_modules
+dist
+build
+.cache
+.vite
+.git
+.gitignore
+.github
+
+# env / secrets — pass these via `docker run --env-file` or your platform's secrets, never bake them in
+.env
+.env.*
+
+# editor / OS cruft
+.vscode
+.idea
+*.log
+logs
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+
+# docs and local tooling not needed in the image
+*.md
+.claude
+.claude-replay.*
+.tmp-*
