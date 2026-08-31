@@ -55,38 +55,6 @@ function XIcon() {
   )
 }
 
-// 3D Graphic Artwork Component with RefactorQ Company Standard Palette (Orange/Warm Amber & Slate)
-function Banner3DGraphic() {
-  return (
-    <div className="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center shrink-0">
-      <div className="absolute inset-0 bg-indigo-500/25 rounded-full blur-2xl animate-pulse" />
-      <svg className="w-full h-full relative z-10 drop-shadow-2xl" viewBox="0 0 200 200" fill="none">
-        <defs>
-          <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#818cf8" />
-            <stop offset="50%" stopColor="#4f46e5" />
-            <stop offset="100%" stopColor="#3730a3" />
-          </linearGradient>
-          <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#ffffff" stopOpacity="0.05" />
-          </linearGradient>
-        </defs>
-        {/* Outer orbital rings */}
-        <circle cx="100" cy="100" r="75" stroke="url(#glassGrad)" strokeWidth="3" strokeDasharray="6 6" />
-        <circle cx="100" cy="100" r="60" stroke="#a5b4fc" strokeWidth="1.5" strokeOpacity="0.5" />
-        {/* Glowing 3D Orb */}
-        <circle cx="100" cy="100" r="44" fill="url(#orbGrad)" />
-        {/* Glass reflection highlight */}
-        <ellipse cx="85" cy="80" rx="20" ry="12" fill="#ffffff" fillOpacity="0.35" transform="rotate(-30 85 80)" />
-        {/* Sparkles */}
-        <path d="M145 55L148 65L158 68L148 71L145 81L142 71L132 68L142 65Z" fill="#ffffff" fillOpacity="0.9" />
-        <path d="M50 135L52 142L59 144L52 146L50 153L48 146L41 144L48 142Z" fill="#c7d2fe" fillOpacity="0.8" />
-      </svg>
-    </div>
-  )
-}
-
 export function Footer() {
   return (
     <footer className="relative bg-white text-slate-700 pt-24 pb-12 border-t border-slate-200/80">
@@ -266,13 +234,6 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200/80 pt-8 text-xs font-medium text-slate-500">
           <span>© 2026 RefactorQ Consulting LLP. All rights reserved.</span>
           <div className="flex items-center gap-6">
-            <Link className="hover:text-indigo-600 transition-colors" to="/privacy">
-              Privacy Policy
-            </Link>
-            <Link className="hover:text-indigo-600 transition-colors" to="/terms">
-              Terms of Use
-            </Link>
-            <span className="text-slate-300">•</span>
             <a className="hover:text-indigo-600 transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
               LinkedIn
             </a>
